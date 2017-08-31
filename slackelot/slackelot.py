@@ -15,6 +15,10 @@ def send_slack_message(message, webhook_url, pretext=None, title=None):
         pretext (string)
         title (string)
     """
+    if 'https://hooks.slack.com/services/' not in webhook_url:
+        raise SlackNotificationError(
+            'webhook_url is not in the correct format. It should look like this:\n\
+            https://hooks.slack.com/services/{team id}/{bot or channel id}/{auth token}')
 
     payload = {
         'attachments': [
@@ -34,6 +38,6 @@ def send_slack_message(message, webhook_url, pretext=None, title=None):
         if response.status_code == 200:
             return True
         else:
-            time.sleep(10)
+            time.sleep(3)
         # If the notification doesn't go through after 10 attempts, raise an error.
         raise SlackNotificationError('Slack notification failed after 10 attempts.')
