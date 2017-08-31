@@ -6,8 +6,8 @@ class SlackNotificationError(Exception):
     pass
 
 
-def send_slack_message(message, webhook_url, pretext=None, title=None):
-    """ Send slack message using webhooks
+def send_slack_message(message, webhook_url, pretext='', title='', author_name='', color=None):
+    """Send slack message using webhooks
 
     Args:
         message (string)
@@ -20,10 +20,15 @@ def send_slack_message(message, webhook_url, pretext=None, title=None):
             'webhook_url is not in the correct format. It should look like this:\n\
             https://hooks.slack.com/services/{team id}/{bot or channel id}/{auth token}')
 
+    fallback ='\n'.join([title, author_name, message])
+
     payload = {
         'attachments': [
             {
+                'fallback': fallback,
+                'color': color,
                 'pretext': pretext,
+                'author_name': author_name,
                 'title': title,
                 'text': message,
                 'mrkdwn_in': ['text', 'pretext']
