@@ -2,7 +2,9 @@
 Simple wrapper around the Slack Web API to post messages.
 
 ### Details
+
 Slackelot contains a single function:
+
 `send_message(message, webhook_url, pretext='', title='', author_name='', color=None)`
 
 `webhook_url` should be in the following format:
@@ -23,7 +25,7 @@ color = '#663399'
 send_message(message, webhook_url, pretext=pretext, title=title, author_name=author_name, color=color)
 ```
 
-A nice feature for paid Slack teams is the option to mention another subteam, (ie. channel). In that
+Paid teams have the option to mention other subteams, (ie. channel). In that
 case, you might append something like this to your message:
 
 `'\n<!subteam^ID|HANDLE>'`
