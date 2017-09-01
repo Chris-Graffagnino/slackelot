@@ -52,6 +52,7 @@ if __name__ == '__main__':
         author_email='graffwebdev@gmail.com',
         license='MIT',
         keywords='slack',
+        python_requires='>=2.7',
         classifiers=CLASSIFIERS,
         install_requires=INSTALL_REQUIRES,
         extras_require=EXTRAS_REQUIRE,
