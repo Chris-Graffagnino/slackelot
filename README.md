@@ -7,10 +7,10 @@ Slackelot contains a single function:
 
 `send_message(message, webhook_url, pretext='', title='', author_name='', color=None)`
 
-`webhook_url` should be in the following format:
+_webhook_url_ should be in the following format:
 `'https://hooks.slack.com/services/TEAM_ID/BOT_OR_CHANNEL_ID/AUTH_TOKEN'`
 
-_Example_
+*Example*
 ```
 from slackelot.slackelot import send_message
 
@@ -24,6 +24,7 @@ color = '#663399'
 
 send_message(message, webhook_url, pretext=pretext, title=title, author_name=author_name, color=color)
 ```
+[[https://github.com/Chris-Graffagnino/slackelot/blob/master/slackelot_example.png|alt=example]]
 
 Paid teams have the option to mention other subteams, (ie. channel). In that
 case, you might append something like this to your message:
