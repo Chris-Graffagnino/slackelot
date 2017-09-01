@@ -24,7 +24,7 @@ color = '#663399'
 
 send_message(message, webhook_url, pretext=pretext, title=title, author_name=author_name, color=color)
 ```
-[[https://github.com/Chris-Graffagnino/slackelot/blob/master/slackelot_example.png|alt=example]]
+![image](https://github.com/Chris-Graffagnino/slackelot/blob/master/slackelot_example.png|alt=example)
 
 Paid teams have the option to mention other subteams, (ie. channel). In that
 case, you might append something like this to your message:
