@@ -7,7 +7,7 @@ Slackelot contains a single function:
 
 `send_message(message, webhook_url, pretext='', title='', author_name='', color=None)`
 
-_webhook_url_ should be in the following format:
+*webhook_url* should be in the following format:
 `'https://hooks.slack.com/services/TEAM_ID/BOT_OR_CHANNEL_ID/AUTH_TOKEN'`
 
 *Example*
