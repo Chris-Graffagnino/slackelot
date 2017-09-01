@@ -14,6 +14,8 @@ def send_message(message, webhook_url, pretext='', title='', author_name='', col
         webhook_url (string), 'https://hooks.slack.com/services/{team id}/{bot or channel id}/{auth token}'
         pretext (string)
         title (string)
+        author_name (string)
+        color (string) e.g. '#336699'
     """
     if 'https://hooks.slack.com/services/' not in webhook_url:
         raise SlackNotificationError(
