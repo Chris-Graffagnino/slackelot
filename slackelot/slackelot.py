@@ -6,7 +6,7 @@ class SlackNotificationError(Exception):
     pass
 
 
-def send_slack_message(message, webhook_url, pretext='', title='', author_name='', color=None):
+def send_message(message, webhook_url, pretext='', title='', author_name='', color=None):
     """Send slack message using webhooks
 
     Args:
