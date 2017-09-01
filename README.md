@@ -2,7 +2,7 @@
 Simple wrapper around the Slack Web API to post messages.
 
 
-### Details
+## Details
 
 Slackelot contains a single function:  
 `send_message(message, webhook_url, pretext='', title='', author_name='', color=None)`
@@ -13,7 +13,7 @@ Slackelot contains a single function:
 
 *Example*
 ```
-from slackelot.slackelot import send_message
+from slackelot import send_message
 
 
 webhook_url = 'https://hooks.slack.com/services/TXXXXXXXX/BXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX'
@@ -27,6 +27,7 @@ send_message(message, webhook_url, pretext=pretext, title=title, author_name=aut
 ```
 ![image](https://github.com/Chris-Graffagnino/slackelot/blob/master/slackelot_example.png)
 
+### Extra Goodness
 Paid teams have the option to mention other subteams, (ie. channel). In that
 case, you might append something like this to your message:
 
@@ -36,7 +37,7 @@ case, you might append something like this to your message:
 For more information on message formatting, see the [Slack API docs](https://api.slack.com/docs/message-formatting)
 
 
-### FAQ
+## FAQ
 
 [Where do I find my Slack team id?](https://api.slack.com/methods/team.info/test)
 
