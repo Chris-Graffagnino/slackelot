@@ -1,7 +1,11 @@
 import pytest
-import mock
 
-from slackelot.slackelot import SlackNotificationError, send_message
+try:
+    from unittest import mock
+except ImportError:
+    import mock
+
+from slackelot import SlackNotificationError, send_message
 
 
 def test_send_message_success():
