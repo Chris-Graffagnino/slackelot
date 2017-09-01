@@ -24,7 +24,7 @@ send_message(message, webhook_url, pretext=pretext, title=title, author_name=aut
 ```
 
 A nice feature for paid Slack teams is the option to mention another subteam, (ie. channel). In that
-case, use the following syntax in your message:
+case, you might append something like this to your message:
 
 `'\n<!subteam^ID|HANDLE>'`
 (replace `ID` and `HANDLE` with your subteam's id and name, respectively).
