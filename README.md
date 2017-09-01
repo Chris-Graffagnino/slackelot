@@ -1,11 +1,12 @@
 # Slackelot
 Simple wrapper around the Slack Web API to post messages.
 
+
 ### Details
 
-Slackelot contains a single function:
-
+Slackelot contains a single function:  
 `send_message(message, webhook_url, pretext='', title='', author_name='', color=None)`
+
 
 **webhook_url** should be in the following format:
 `'https://hooks.slack.com/services/TEAM_ID/BOT_OR_CHANNEL_ID/AUTH_TOKEN'`
@@ -33,6 +34,7 @@ case, you might append something like this to your message:
 (replace `ID` and `HANDLE` with your subteam's id and name, respectively).
 
 For more information on message formatting, see the [Slack API docs](https://api.slack.com/docs/message-formatting)
+
 
 ### FAQ
 
