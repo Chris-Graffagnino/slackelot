@@ -1,15 +1,21 @@
 from setuptools import setup, find_packages
 
-from codecs import open
+from io import open
 from os import path
 
-here = path.abspath(path.dirname(__file__))
+try:
+    from pypandoc import convert
 
-# Get the long description from the README file
-with open(path.join(here, 'README.md'), encoding='utf-8') as f:
-    long_description = f.read()
+    def read_md(f):
+        return convert(f, 'rst')
+except ImportError:
+    print("warning: pypandoc module not found, could not convert Markdown to RST")
 
-INSTALL_REQUIRES = ['requests', 'pytest']
+    def read_md(f):
+        return open(f, 'r', encoding='utf-8').read()
+
+
+INSTALL_REQUIRES = ['requests', 'pytest', 'pypandoc']
 EXTRAS_REQUIRE = {}
 
 PACKAGES = find_packages(exclude=['contrib', 'docs', 'tests'])
@@ -46,7 +52,7 @@ if __name__ == '__main__':
         name='slackelot',
         version='0.0.1',
         description='A simple wrapper around the Slack web api to post messages',
-        long_description=long_description,
+        long_description=read_md('README.md'),
         url='https://github.com/Chris-Graffagnino/slackelot',
         author='Chris Graffagnino',
         author_email='graffwebdev@gmail.com',
