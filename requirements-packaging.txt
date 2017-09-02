@@ -1,0 +1,5 @@
+# Twine for secured PyPI uploads.
+twine==1.9.1
+
+# Pandoc to have a nice pypi page
+pypandoc
