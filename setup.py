@@ -51,7 +51,7 @@ else:
 if __name__ == '__main__':
     setup(
         name='slackelot',
-        version='0.0.2',
+        version='0.0.4',
         description='A simple wrapper around the Slack web api to post messages',
         long_description=read_md('README.md'),
         url='https://github.com/Chris-Graffagnino/slackelot',

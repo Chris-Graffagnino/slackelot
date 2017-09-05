@@ -43,9 +43,4 @@ For more information on message formatting, see the [Slack API docs](https://api
 
 [Where do I find my Slack channel ids?](https://api.slack.com/methods/channels.list/test)
 
-[Where do I create a  Slack auth token?](https://api.slack.com/tokens)
-
-[How do I create a Slack bot user?](https://api.slack.com/bot-users)
-
-
-
+[How do I create the url (webhook)?](https://my.slack.com/services/new/incoming-webhook/)
