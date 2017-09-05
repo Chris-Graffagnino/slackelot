@@ -1,5 +1,4 @@
 include LICENSE
 include *.md
 include *.txt
-recursive-include tests *
 global-exclude __pycache__
